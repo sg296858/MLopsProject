@@ -91,7 +91,7 @@ with mlflow.start_run():
 
     
     # 1) Save the model to disk
-    model_path = "rf_model1"
+    model_path = "rf_model2"
     mlflow.sklearn.save_model(best_model, model_path)
 
     # 2) Log the entire folder as an artifact
