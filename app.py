@@ -68,6 +68,10 @@ with mlflow.start_run():
     current_data=pd.DataFrame(X_test,columns=['sepal_length','sepal_width','petal_length','petal_width'])
     current_data['target']=Y_test
     current_data['prediction']=best_model.predict(X_test)
+     
+    #Introducing some drift . 
+    current_data['sepal_length'] = current_data['sepal_length'] + 1.5
+
 
     report=Report(metrics=[
         DataDriftPreset(),
@@ -91,7 +95,7 @@ with mlflow.start_run():
 
     
     # 1) Save the model to disk
-    model_path = "rf_model2"
+    model_path = "rf_model3"
     mlflow.sklearn.save_model(best_model, model_path)
 
     # 2) Log the entire folder as an artifact
