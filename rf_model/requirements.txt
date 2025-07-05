@@ -1,0 +1,9 @@
+mlflow==3.0.1
+cloudpickle==2.2.1
+lz4==4.3.2
+numpy==1.26.4
+pandas==2.2.2
+pathlib==1.0.1
+psutil==5.9.0
+scikit-learn==1.7.0
+scipy==1.13.1
